@@ -1,0 +1,25 @@
+{% include "header.html" %}
+
+{% for cat in CATEGORIES %}
+    <h2>{{ cat|title }}</h2>
+    <div class="cardBox d-flex flex-wrap justify-content-center">
+        {% for work in WORKS %}
+            {% if work.subcategory is eq(cat) %}
+                <div class="card">
+                  <div class="card-header">
+                      <a href="{{ work.link }}" target="_blank" rel="noopener noreferrer">{{ work.name }}</a>
+                      {% if work.subcategory is not eq("nonfiction") %}
+                        ({{ work.status|title}})
+                      {% endif %}
+                  </div>
+                  <div class="card-body">
+                    <p class="card-text">{{ work.description|safe }}</p>
+                  </div>
+                </div>
+            {% endif %}
+        {% endfor %}
+    </div>
+    <hr>
+{% endfor %}
+
+{% include "footer.html" %}

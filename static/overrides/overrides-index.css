@@ -1,0 +1,27 @@
+#bootstrap-overrides #boxesWrapper {
+    width: 100%;
+    vertical-align: center;
+}
+
+#bootstrap-overrides .rowBox {
+    max-width: 49%;
+    min-width: 49%;
+    padding: 0;
+    margin: 0;
+    vertical-align: top;
+}
+
+#bootstrap-overrides .verticalButtons .btn {
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
+}
+
+#bootstrap-overrides .verticalButtons .btn img {
+    max-height: 2rem;
+    margin-right: 1rem;
+    vertical-align: center;
+}
+
+#bootstrap-overrides #headshotWrapper img {
+    max-width: 90%;
+}

@@ -1,0 +1,93 @@
+{% include "header.html" %}
+<link rel="stylesheet" href="{{ url_for('static', filename='overrides/overrides-index.css') }}">
+
+<table class="table text-center table-borderless">
+    <tbody>
+        <tr>
+            <td><h1 class="d-inline">Cogito, ergo sum</h1></td>
+            <td><h1 class="d-inline text-right"><small class=""><em>I think, therefore I am</em></small></h1></td>
+        </tr>
+    </tbody>
+</table>
+
+
+<table class="table text-center table-bordered">
+    <thead>
+        <tr>
+            <th>I think...</th>
+            <th>Therefore I am...</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr class="table-danger">
+            <td>The world is exciting.</td>
+            <td>Excited. Enthusiastic. All the time.</td>
+        </tr>
+        <tr class="table-warning">
+            <td data-toggle="popover" data-content="Source: <a href='#'>Doctor Who</a>">"What’s the point in being grown up if you can’t be childish sometimes?"</td>
+            <td>Very serious about being silly.</td>
+        </tr>
+        <tr class="table-success">
+            <td>High standards are important. So is being nice.</td>
+            <td>Hard on ideas, soft on people.</td>
+        </tr>
+        <tr class="table-primary">
+            <td>Confusing documentation is a bug in a project.</td>
+            <td>Always trying to improve at documenting.</td>
+        </tr>
+        <tr class="table-info">
+            <td>You can't make something better until it exists in the first place.</td>
+            <td>Prototyping before polishing. Sharing early and often.</td>
+        </tr>
+    </tbody>
+</table>
+
+<hr>
+
+<blockquote class="blockquote">
+  <p class="mb-0">"The costs of contacting someone you want to learn from are about as close to zero as they’ll ever be. Honestly, what’s the worst that can happen? You come off as someone eager to learn. If they ignore you, you know it’s because they’re too busy <em>doing</em> to <em>talk about</em>. If they’re a <span data-toggle="popover" data-content="See <a href='#'>Good Place Swear Words</a>">deck</span>, then you’ve already learned a valuable lesson. Regardless of the outcome, you’ll always learn something, even if it’s just how to lessen the fear of rejection by sending that <span data-toggle="popover" data-content="See <a href='#'>Good Place Swear Words</a>">darn</span> email."</p>
+  <footer class="blockquote-footer"><em>CollegeInfoGeek</em></footer>
+</blockquote>
+
+<div class="container text-center" id="boxesWrapper">
+    <div id="headshotWrapper" class="d-inline-block text-center rowBox">
+        <img class="d-block" src="{{ url_for('static', filename='images/headshot.png') }}" />
+        <a href=""><small class="text-muted"><em>Funny story about this shirt...</em></small></a>
+    </div>
+
+    <div class="rowBox verticalButtons d-inline-block">
+        <h4>What are you waiting for?</h4>
+
+        <a class="btn btn-danger btn-block" target="_blank" rel="noopener noreferrer" href="mailto:sophieopferman6@gmail.com?subject=%5BFrom%20Website%5D&body=This%20is%20me%2C%20hacking%20your%20email!%0D%0A%0D%0A(Not%20really.)" ><img src="{{ url_for('static', filename='images/email.png') }}" />Email</a>
+        <a class="btn btn-primary btn-block" target="_blank" rel="noopener noreferrer" href="https://keybase.io/thefirstquestion"><img src="{{ url_for('static', filename='images/keybase.png') }}" />Keybase</a>
+        <a class="btn btn-secondary btn-block" target="_blank" rel="noopener noreferrer" href="https://github.com/TheFirstQuestion"><img src="{{ url_for('static', filename='images/github.png') }}" />GitHub</a>
+        <a class="btn btn-primary btn-block" target="_blank" rel="noopener noreferrer" href="https://musescore.com/sophiego"><img src="{{ url_for('static', filename='images/musescore.png') }}" />MuseScore</a>
+
+        <h4> or </h4>
+
+        <form action="https://script.google.com/macros/s/AKfycbzwwq0C2z0kZPmsu4jTCURtjwR6uYBD9Lu7yBG5zH3TZETuTa-e/exec" class="gform" method="post">
+            <div class="card border-success">
+                <div class="card-header">
+                    <p class="m-0">Send me an anonymous message</p>
+                </div>
+                <div class="card-body">
+                    <div class="input-group">
+                        <textarea name="message" class="form-control" placeholder="FUbS71f pH5549H2 HQf0Xu49HG!" required></textarea>
+                    </div>
+                    <input class="d-none" type="text" name="url" placeholder="Please leave this empty!" />
+                    <div style="display:none" class="thankyou_message">
+                        <p>Your message has been sent.</p>
+                        <p class="handwriting">Thank you for taking a risk.</p>
+                    </div>
+                    <div class="text-center">
+                        <input type="submit" value="Enter" class="btn btn-success btn-block">
+                    </div>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
+
+<script data-cfasync="false" type="text/javascript" src="{{ url_for('static', filename='scripts/form-submit.js') }}"></script>
+
+{% include "footer.html" %}

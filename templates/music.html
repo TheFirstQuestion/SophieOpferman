@@ -1,0 +1,19 @@
+{% include "header.html" %}
+
+<blockquote class="blockquote">
+  <p class="mb-0">"I often think in terms of music. I live my daydreams in music. I see my life in terms of music."</p>
+  <footer class="blockquote-footer"><em>Albert Einstein</em></footer>
+</blockquote>
+
+<div class="cardBox d-flex flex-wrap justify-content-center">
+    {% for work in WORKS %}
+        <div class="card">
+          <a href="{{ work.link }}" target="_blank" rel="noopener noreferrer"><div class="card-header">{{ work.name }}</div></a>
+          <div class="card-body">
+            <p class="card-text">{{ work.description|safe }}</p>
+          </div>
+        </div>
+    {% endfor %}
+</div>
+
+{% include "footer.html" %}

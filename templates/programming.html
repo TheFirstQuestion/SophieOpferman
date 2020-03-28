@@ -1,0 +1,27 @@
+{% include "header.html" %}
+
+<p class="handwriting"><strong>Note:</strong> To keep myself accountable, everything on this page comes directly from GitHub. That means that if I forgot to push a commit, or if I was too lazy to create a repo, that project isn't shown here. Sorry!</p>
+
+<div class="cardBox d-flex flex-wrap justify-content-center">
+    {% for work in WORKS %}
+        {% if work.status is eq("maintained") %}
+            <div class="card bg-primary">
+        {% elif work.status is eq("in progress") %}
+            <div class="card bg-warning">
+        {% elif work.status is eq("completed") %}
+            <div class="card bg-success">
+        {% else %}
+            <div class="card">
+        {% endif %}
+          <div class="card-header"><a href="{{ work.link }}" target="_blank" rel="noopener noreferrer">{{ work.name }}</a> ({{ work.status|title }})</div>
+          <div class="card-body">
+            <p class="card-text">{{ work.description|safe }}</p>
+            {% if work.demoLink is not none %}
+              <p><a href="{{ work.demoLink }}" target="_blank" rel="noopener noreferrer">Live Version</a></p>
+            {% endif %}
+          </div>
+        </div>
+    {% endfor %}
+</div>
+
+{% include "footer.html" %}

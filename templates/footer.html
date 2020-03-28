@@ -1,0 +1,30 @@
+</div>
+
+<footer class="mt-auto">
+    <div>
+      <p class="text-center"><small><em> a sophiego production </em></small></p>
+    </div>
+</footer>
+
+<!-- JavaScript -->
+<script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+<script src="{{ url_for('static', filename='bootstrap/dist/js/bootstrap.bundle.min.js') }}"></script>
+
+<script>
+    // Switch active in the navbar
+    $('a[href="' + this.location.pathname + '"]').addClass('active');
+    
+    $(function () {
+        // Make popovers pop
+        $('[data-toggle="popover"]').popover({
+            container: 'body',
+            html: true
+        })
+        // Give popovers the pointer so it's clear you can click them
+        $('[data-toggle="popover"]').css('cursor', 'pointer');
+        $('[data-toggle="popover"]').addClass('mark');
+    })
+</script>
+
+</body>
+</html>
