@@ -8,6 +8,7 @@ app.config['TEMPLATES_AUTO_RELOAD'] = True
 
 
 ##### CONSTANTS #####
+DB_NAME = "SophieOpferman.db"
 CATEGORIES = ("nonfiction", "original", "derivative")
 #####################
 
@@ -48,7 +49,7 @@ def favicon():
 
 ############################# database stuff ##########################
 def openDB():
-    engine = create_engine("sqlite:///SophieOpferman.db")
+    engine = create_engine("sqlite:///" + DB_NAME)
     Base = declarative_base()
     Base.metadata.create_all(engine)
     Base.metadata.bind = engine

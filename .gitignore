@@ -1,3 +1,4 @@
+__pycache__/
 __pycache__/*
 github-test.py
-buildDB.py
+github-access-token.txt

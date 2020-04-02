@@ -3,10 +3,10 @@ My personal website, a repository of everything you are allowed to know about me
 
 ## Dependencies
 * Flask
-* sqlite3
 * sqlalchemy
 
 ## Running
+Generate [GitHub Access Token](https://github.com/settings/tokens) and put it in `github-access-token.txt`.  
 `make clean`<br>
 `make`<br>
 `make run`
@@ -20,6 +20,7 @@ My personal website, a repository of everything you are allowed to know about me
 * https://bootstrapvars.com/
 * https://github.com/dwyl/learn-to-send-email-via-google-script-html-no-server
 * https://www.nfriedly.com/techblog/2009/11/how-to-build-a-spam-free-contact-forms-without-captchas/
+* https://jinja.palletsprojects.com/en/2.11.x/templates/
 
 ---
 _____onsite,maintained_____
